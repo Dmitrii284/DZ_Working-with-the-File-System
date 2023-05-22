@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <fstream>
 #include<string>
 
@@ -14,7 +14,7 @@ bool print_file(std::string file_path) {
 		return true;					
 	}
 	else
-		std::cout << "Îøèáêà îòêðûòèÿ ôàéëà.\n";
+		std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°.\n";
 	in.close();
 	return false;
 }
@@ -30,13 +30,13 @@ int main() {
 	if (out.is_open()) {
 		std::string input;
 		do{
-		std::cout << "Ââåäèòå ñòðîêó: ";
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ñ€Ð¾ÐºÑƒ: ";
 		std::getline(std::cin, input);		
 		out << input << "\n";		
 		} while (input != "end");		
 	}
 	else
-		std::cout << "Îøèáêà îòêðûòèÿ ôàéëà1\n";
+		std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°1\n";
 	out.close();
 
 	std::ifstream in;
@@ -48,20 +48,20 @@ int main() {
 		}
 	}	
 	else
-		std::cout << "Îøèáêà îòêðûòèÿ ôàéëà2 \n";
+		std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°2 \n";
 	in.close();
 	remove("file.txt");
 
 	//Task 2
 	
 	std::string path = "file2.txt";
-	std::cout << "Íà÷àëüíîå ñîäåðæèìîå ôàéëà ¹2: \n";	
+	std::cout << "ÐÐ°Ñ‡Ð°Ð»ÑŒÐ½Ð¾Ðµ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ðµ Ñ„Ð°Ð¹Ð»Ð° â„–2: \n";	
 	print_file(path);		
-		std::cout << "Ââåäèòå òåêñò -> ";
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚ÐµÐºÑÑ‚ -> ";
 		std::string str2;
 		std::getline(std::cin, str2);
 		overwrite(path, str2);
-		std::cout << "Êîíå÷íîå ñîäåðæèìîå ôàéëà ¹2: \n";
+		std::cout << "ÐšÐ¾Ð½ÐµÑ‡Ð½Ð¾Ðµ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ðµ Ñ„Ð°Ð¹Ð»Ð° â„–2: \n";
 		print_file(path);
 
 	return 0;
@@ -78,7 +78,7 @@ bool overwrite( std::string file_path, std::string str1) {
 		return true;
 	}
 	else 
-		std::cout << "Îøèáêà îòêðûòèÿ ôàéëà.\n";
+		std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°.\n";
 		file.close();
 		return false;	
 }
